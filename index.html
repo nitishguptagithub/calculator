@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../all.css">
+    <link rel="stylesheet" href="fonts.css">
+    <title>Working transparent calculator</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<div class="container">
+  <form name="calculator">
+    <input type="text" name="display">
+
+    <input type="button" value="1" onclick="calculator.display.value += '1'">
+    <input type="button" value="2" onclick="calculator.display.value += '2'">
+    <input type="button" value="3" onclick="calculator.display.value += '3'">
+    <input type="button" value="back" onclick="calculator.display.value = display.value.slice(0, -1)">
+
+    <input type="button" value="4" onclick="calculator.display.value += '4'">
+    <input type="button" value="5" onclick="calculator.display.value += '5'">
+    <input type="button" value="6" onclick="calculator.display.value += '6'">
+    <input type="button" value="-" onclick="calculator.display.value += '-'">
+
+    <input type="button" value="7" onclick="calculator.display.value += '7'">
+    <input type="button" value="8" onclick="calculator.display.value += '8'">
+    <input type="button" value="9" onclick="calculator.display.value += '9'">
+    <input type="button" value="x" onclick="calculator.display.value += '*'">
+
+
+
+
+
+
+    <input type="button" value="." onclick="calculator.display.value += '.'">
+    <input type="button" value="0" onclick="calculator.display.value += '0'">
+    <input type="button" value="/" onclick="calculator.display.value += '/'">
+    <input type="button" value="+" onclick="calculator.display.value += '+'">
+    <input type="button" value="clear" onclick="calculator.display.value = ''">
+    <input type="button" class="total" value="=" onclick="calculator.display.value = eval(calculator.display.value )">
+
+
+
+
+  </form>
+</div>
+</body>
+<style>
+    * {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background: url(calculator1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  height: 45rem;
+  width: 40rem;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0 1rem #333;
+          box-shadow: 0 0 1rem #333;
+}
+
+.container form {
+  height: 90%;
+  width: 90%;
+}
+
+.container form input[type="text"] {
+  width: calc(100% - .5rem);
+  height: 5rem;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 0 2rem;
+  margin: 1rem 0;
+}
+
+.container form input[type="button"] {
+  border: none;
+  outline: none;
+  height: 6rem;
+  width: 8rem;
+  margin: .35rem;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.container form input[type="button"]:active {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.container form input[type="button"].total {
+  width: 26rem;
+  background: rgba(255, 0, 0, 0.5);
+  color: #fff;
+}
+
+.container form input[type="button"].total:active {
+  background: rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=style.css.map */
+</style>
+</html>
